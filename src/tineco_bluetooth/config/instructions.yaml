@@ -1,0 +1,18 @@
+start_cook_shanghai_green:
+  key_value: "cook_shanghai_green"
+  actionType: "startCook"
+  menuId: "20230904130922_60dff78391b6fa08e386d84b958f2d14"
+
+start_cook_broccoli_shrimp:
+  key_value: "cook_broccoli_shrimp"
+  actionType: "startCook"
+  menuId: "20230906132931_e8708ad1bc074c1a01389a61ef28e92d"
+
+start_cook_pork_belly:
+  key_value: "cook_pork_belly"
+  actionType: "startCook"
+  menuId: "20221207091325_63461d2d74e7ad5bafa5ead45869c75f"
+
+add_food_complete:
+  key_value: "add_food_complete"
+  actionType: "addFoodComplete"

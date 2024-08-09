@@ -1,0 +1,4 @@
+<launch>
+    <!-- 启动 tineco_bluetooth_node.py 节点 -->
+    <node name="tineco_bluetooth_node" pkg="tineco_bluetooth" type="tineco_bluetooth_node.py" output="screen" />
+</launch>
