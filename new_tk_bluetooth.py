@@ -111,7 +111,7 @@ async def main():
     try:
         # 发送烹饪指令到食万
         input_data = {"actionType":"startCook", "menuId":"20230904130922_60dff78391b6fa08e386d84b958f2d14"}
-        finsh_data = {"actionType" : "addFoodComplete"}
+        finsh_data = {"actionType":"addFoodComplete"}
 
         await send_data(client, input_data)  # 西兰花炒虾仁
         print(" --- success to send_data --- ")
