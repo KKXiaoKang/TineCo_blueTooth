@@ -25,6 +25,9 @@ device_address = '18:00:00:D8:F6:7F'
 
 client = None
 
+# 创建全局事件循环
+loop = asyncio.get_event_loop()
+
 def calculate_checksum(data):
     return sum(data) & 0xFF
 
@@ -96,10 +99,7 @@ async def handle_action(actionType):
         return False
 
 def handle_send_data(req):
-    loop = asyncio.new_event_loop()
-    asyncio.set_event_loop(loop)
     result = loop.run_until_complete(handle_action(req.actionType))
-    loop.close()
     return send_tineco_dataResponse(result)
 
 def tineco_bluetooth_server():
@@ -111,10 +111,7 @@ def tineco_bluetooth_server():
         rospy.spin()
     finally:
         # 确保节点关闭时断开设备连接
-        loop = asyncio.new_event_loop()
-        asyncio.set_event_loop(loop)
         loop.run_until_complete(disconnect_from_device())
-        loop.close()
 
 if __name__ == "__main__":
     tineco_bluetooth_server()
